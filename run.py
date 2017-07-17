@@ -2,7 +2,7 @@ import sys, argparse
 
 def createParser():
     parser = argparse.ArgumentParser()
-    parser.add_argument('bst', choices=['xgb', 'lgb', 'cab', 'lgboh', 'caboh'])
+    parser.add_argument('bst', choices=['xgb', 'lgb', 'cab'])
     parser.add_argument('learning_task', choices=['classification', 'regression'])
     parser.add_argument('-t', '--n_estimators', type=int, default=5000)
     parser.add_argument('-n', '--hyperopt_evals', type=int, default=50)
@@ -27,12 +27,6 @@ if __name__ == "__main__":
     elif namespace.bst == 'cab':
         from catboost_experiment import CABExperiment
         Experiment = CABExperiment
-    elif namespace.bst == 'lgboh':
-        from lightgbm_ohe_experiment import LGBOHExperiment
-        Experiment = LGBOHExperiment
-    elif namespace.bst == 'caboh':
-        from catboost_ohe_experiment import CABOHExperiment
-        Experiment = CABOHExperiment
 
     experiment = Experiment(namespace.learning_task, namespace.n_estimators, namespace.hyperopt_evals, 
                             namespace.time_sort, namespace.holdout_size, 

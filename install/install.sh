@@ -4,7 +4,7 @@ pip install -U pip
 pip install -r requirements.txt
 
 # CatBoost
-pip install catboost -i https://pypi.yandex-team.ru/simple/
+pip install catboost==0.1.1
 
 # XGBoost
 git clone --recursive https://github.com/dmlc/xgboost

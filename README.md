@@ -23,11 +23,11 @@ You can find detailed information about experimental setup in [comparison descri
 ## Docker
 
 * Docker has everything necessary for running experiments with Python.
-* __Link:__  https://hub.docker.com/r/nikitxskv/comparison/
+* __Link:__  https://hub.docker.com/r/yandex/catboost_benchmarks/
 * __To launch__:
 
 ```
-docker run --workdir /root -v <path_to_local_folder>:/root/shared -p 80:8888 -it nikitxskv/comparison sh -c "ipython notebook --ip=* --no-browser"
+docker run --workdir /root -v <path_to_local_folder>:/root/shared -p 80:8888 -it yandex/catboost_benchmarks sh -c "ipython notebook --ip=* --no-browser --allow-root"
 ```
 
 ## Files
