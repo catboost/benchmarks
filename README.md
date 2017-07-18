@@ -2,7 +2,7 @@
 
 ## Comparison results
 
-| | Default CatBoost | Tuned CatBoost | Default LightGMB | Tuned LightGMB | Default XGBoost | Tuned XGBoost | Default H2O | Tuned H2O
+| | Default CatBoost | Tuned CatBoost | Default LightGBM | Tuned LightGBM | Default XGBoost | Tuned XGBoost | Default H2O | Tuned H2O
 --- | --- | --- | --- | --- | --- | --- | --- | ---
 [Adult](https://archive.ics.uci.edu/ml/datasets/Adult) | 0.272978 (±0.0004) (+1.20%) | _**0.269741**_ (±0.0001) | 0.287165 (±0.0000) (+6.46%) | 0.276018 (±0.0003) (+2.33%) | 0.280087 (±0.0000) (+3.84%) | 0.275423 (±0.0002) (+2.11%) | 0.276066 (±0.0000) (+2.35%) | 0.275104 (±0.0003) (+1.99%)
 [Amazon](https://www.kaggle.com/c/amazon-employee-access-challenge) | 0.138114 (±0.0004) (+0.29%) | _**0.137720**_ (±0.0005) | 0.167159 (±0.0000) (+21.38%) | 0.163600 (±0.0002) (+18.79%) | 0.165365 (±0.0000) (+20.07%) | 0.163271 (±0.0001) (+18.55%) | 0.169497 (±0.0000) (+23.07%) | 0.162641 (±0.0001) (+18.09%)
