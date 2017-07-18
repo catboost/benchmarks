@@ -18,7 +18,7 @@
 Metric: Logloss (lower is better). In the first brackets - std, in the second - the percentage difference from the tuned CatBoost.
 
 
-You can find detailed information about experimental setup in [comparison description](https://github.com/yandexdataschool/catboost_research/blob/master/experiments/comparison_description.pdf)
+You can find detailed information about experimental setup in [comparison description](https://github.com/catboost/benchmarks/blob/master/comparison_description.pdf)
 
 ## Docker
 
