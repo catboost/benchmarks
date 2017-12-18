@@ -6,10 +6,8 @@ CPU version we used dual-socket server with 2 Intel~Xeon CPU (E5-2650v2,~2.60GHz
 
 We used [Epsilon dataset](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html) (400К samples, 2000 features) to benchmark our performance on dense  numerical dataset. For dense numerical dataset CatBoost GPU training time depends on level of feature discretization. In the table we report time for default 128 bins and for 32 bins which is often sufficient. For the best performance and lowest memory usage one try to use 15 bins.
 
-
-|            |            |           |
-|:-----------|:-----------|:----------|
 |            | 128 bins   | 32 bins   |            
+|:-----------|:-----------|:----------|
 | CPU        | 713 (1.0)  | 653 (1.0) | 
 | K40        | 547 (1.3)  | 248 (2.6) | 
 | GTX 1080   | 194 (3.67) | 120 (5.4) | 
@@ -22,18 +20,15 @@ We used [Epsilon dataset](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/dataset
 We used [Criteo dataset](https://www.kaggle.com/c/criteo-display-ad-challenge) (first 36M samples, 26 categorical, 13 numerical features) to benchmark our categorical features support. We used 2 GTX1080 because 1 had not enough memory.
 
 
-|            |            |
-|:-----------|:-----------|
-|            |            | 
 |            | 128 bins   |
-| CPU         | 1060 (1.0) |
+|:-----------|:-----------|
+| CPU        | 1060 (1.0) |
 | K40        | 373 (2.84) |
-| GTX 1080    | 285 (3.7)  |
-| P40         | 123 (8.6)  |
-| GTX 1080Ti  | 301 (3.5)  |
-| P100-PCI    | 82 (12.9)  |
-| V100-PCI    | 69.8 (15)  |
-
+| GTX 1080   | 285 (3.7)  |
+| P40        | 123 (8.6)  |
+| GTX 1080Ti | 301 (3.5)  |
+| P100-PCI   | 82 (12.9)  |
+| V100-PCI   | 69.8 (15)  |
 
 ## Comparison with XGBoost and LightGBM
 
