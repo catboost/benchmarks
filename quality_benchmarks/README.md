@@ -18,7 +18,7 @@
 Metric: Logloss (lower is better). In the first brackets - std, in the second - the percentage difference from the tuned CatBoost.
 
 
-You can find detailed information about experimental setup in [comparison description](https://github.com/catboost/benchmarks/blob/master/comparison_description.pdf)
+You can find detailed information about experimental setup in [comparison description](https://github.com/catboost/benchmarks/blob/master/quality_benchmarks/comparison_description.pdf)
 
 ## Docker
 
@@ -43,25 +43,25 @@ docker run --workdir /root -v <path_to_local_folder>:/root/shared -p 80:8888 -it
 
 * __run.py__, __run_default.py__:
    * Files for starting experiments.
-   
+
 * __h2o\_preprocessing.py__:
    * Class for h2o data preprocessing.
-   
+
 * __run\_grid.R__:
    * File for starting h2o experiments in R (classification).
-   
+
 * __run\_grid\_reg.R__:
    * File for starting h2o experiments in R (regression).
-   
+
 * __run\_grid\_enc.R__:
    * File for starting h2o experiments in R (classification) using native h2o categorical_encoding options.
-   
+
 * __run\_grid\_reg\_enc.R__:
    * File for starting h2o experiments in R (regression) using native h2o categorical_encoding options.
 
 * __run_install.R__:
    * File for installing necessary R libraries.
-   
+
 * __install/__:
    * The folder with the Docker file and scripts for installing the necessary libraries.
 
@@ -99,7 +99,7 @@ docker run --workdir /root -v <path_to_local_folder>:/root/shared -p 80:8888 -it
 
 * Usage:
     ```
-    python run.py bst learning_task --train TRAIN_FILE_PATH --test TEST_FILE_PATH --cd CD_FILE_PATH 
+    python run.py bst learning_task --train TRAIN_FILE_PATH --test TEST_FILE_PATH --cd CD_FILE_PATH
           [-t N_ESTIMATORS] [-n HYPEROPT_EVALS] [-o OUTPUT_FOLDER_PATH] [--holdout HOLDOUT] [-h]
     ```
 
@@ -119,7 +119,7 @@ docker run --workdir /root -v <path_to_local_folder>:/root/shared -p 80:8888 -it
         ```
 ## How to launch h2o experiments
 
-* You can run it from the command line from the directory with train and test files. The results will be saved in the working directory. You can also run R and run the commands from here. 
+* You can run it from the command line from the directory with train and test files. The results will be saved in the working directory. You can also run R and run the commands from here.
 
 * H2O works smoother with preprocessed input (all categorical features are transformed to numerical), see the preprocessing script below. But it also works with raw data using its own categorical encoding methods (see `run_grid_enc.R` and `run_grid_reg_enc.R`).
 
