@@ -1,4 +1,5 @@
 {
+  ".":"catboost/benchmarks",
   "AUTHORS":"catboost/benchmarks/AUTHORS",
   "CONTRIBUTING.md":"catboost/benchmarks/CONTRIBUTING.md",
   "LICENSE":"catboost/github_toplevel/LICENSE",
